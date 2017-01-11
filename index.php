@@ -64,12 +64,12 @@ echo '<div class="alert alert-success">
      	<!-- Default panel contents -->
      	<div class="panel-heading">Lista de Alumnos
         <div class="pull-right">
-     	<?php include('frm-crear.php'); ?>
+     	<?php include('modal/registrar.php'); ?>
      	</div>
      	</div>
      	
      	<div class="panel-body">
-     	<?php include('consulta.php'); ?>
+     	<?php include('grid/consulta.php'); ?>
      	</div>
  
      </div>

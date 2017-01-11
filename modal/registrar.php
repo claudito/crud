@@ -3,7 +3,7 @@
   Registrar Alumno
 </button>
 
-<form action="registrar.php" method="POST">
+<form action="procesos/registrar.php" method="POST">
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -22,6 +22,19 @@
 
         <label>Edad</label>
         <input type="number" name="edad" min="1" max="99"  name="edad" class="form-control" required="">
+
+        <label for="">Área</label>
+        <select name="area" id="" class="form-control" required="">
+      <option value="">[Seleccionar]</option>
+      <?php 
+      $query1  = "SELECT * FROM area WHERE id NOT LIKE'".$fila->id."'";
+      $result1 = $db->query($query1);
+      while ($fila1 = mysqli_fetch_object($result1)) 
+      {
+      echo "<option value='$fila1->id'>$fila1->nombre</option>";
+      }   
+      ?>
+      </select>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
